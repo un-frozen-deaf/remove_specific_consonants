@@ -20,7 +20,8 @@ def remove_specific_consonants(original_text, remove_consonants):
     kks_converted_text = ''.join([item['hira'] for item in kks_result])
     kks_converted_text = re.sub(r'ん', 'N', kks_converted_text)
     kks_converted_text = re.sub(r'っ', 'Q', kks_converted_text)
-    kks_converted_text = re.sub(r'つ', 'tu', kks_converted_text)
+    kks_converted_text = re.sub(r'つ', 'u', kks_converted_text)
+    print(kks_converted_text)
     pattern = f"[{''.join(remove_consonants)}](?=[aiueo])"
     romaji_text = jaconv.kana2alphabet(kks_converted_text)
 
@@ -59,9 +60,8 @@ def process_line(line, remove_consonants):
 
 def start_remove_specific_consonants(input_file, output_file, remove_consonants):
     process_text_file(input_file, output_file, remove_consonants)
-    # process_text_file(output_file, output_file, remove_consonants)
 
-input_file = 'test.txt'
+input_file = 'base.txt'
 output_file = 'after.txt'
 remove_consonants = ['k', 's', 't', 'p']
 start_remove_specific_consonants(input_file, output_file, remove_consonants)
