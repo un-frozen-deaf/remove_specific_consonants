@@ -1,0 +1,3 @@
+pip install -r requirements.txt
+
+input_fileとoutput_fileを指定して，remove_consonantsに消したいものを入れてください

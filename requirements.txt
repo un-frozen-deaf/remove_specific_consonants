@@ -1,0 +1,5 @@
+alkana==0.0.3
+deprecated==1.2.14
+jaconv==0.4.0
+pykakasi==2.3.0
+wrapt==1.16.0
